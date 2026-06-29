@@ -1,98 +1,7 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Animal Swipe</title>
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-background:#111;
-overflow:hidden;
-font-family:sans-serif;
-}
-
-#slider{
-display:flex;
-width:400%;
-height:100vh;
-transition:.4s;
-}
-
-.slide{
-width:100vw;
-height:100vh;
-flex-shrink:0;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-}
-
-.slide img{
-width:90%;
-max-height:75vh;
-border-radius:25px;
-object-fit:cover;
-}
-
-h2{
-color:white;
-font-size:40px;
-margin-top:20px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div id="slider">
-
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=1000">
-<h2>🦁 Lion</h2>
-</div>
-
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1000">
-<h2>🐶 Dog</h2>
-</div>
-
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=1000">
-<h2>🐘 Elephant</h2>
-</div>
-
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=1000">
-<h2>🐼 Panda</h2>
-</div>
-
-</div>
-
-<script>
-
-let index=0;
-
-let startX=0;
-
-const slider=document.getElementById("slider");
-
-document.addEventListener("touchstart",(e)=>{
-startX=e.touches[0].clientX;
-});
-
-document.addEventListener("touchend",(e)=>{
+">
+<("touchend",(e)=>{
 
 let endX=e.changedTouches[0].clientX;
 
@@ -111,4 +20,4 @@ slider.style.transform=`translateX(-${index*100}vw)`;
 </script>
 
 </body>
-</html>
+</html
