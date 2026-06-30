@@ -1,23 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Swipe</title>
 
+    <link rel="stylesheet" href="style.css">
 
-">
-<("touchend",(e)=>{
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    >
+</head>
+<body>
 
-let endX=e.changedTouches[0].clientX;
+<div class="swiper">
+    <div class="swiper-wrapper">
 
-if(startX-endX>50 && index<3){
-index++;
-}
+        <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=1200" alt="Lion">
+            <h2>🦁 사자</h2>
+        </div>
 
-if(endX-startX>50 && index>0){
-index--;
-}
+        <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1200" alt="Dog">
+            <h2>🐶 강아지</h2>
+        </div>
 
-slider.style.transform=`translateX(-${index*100}vw)`;
+        <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=1200" alt="Elephant">
+            <h2>🐘 코끼리</h2>
+        </div>
 
-});
+        <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=1200" alt="Panda">
+            <h2>🐼 판다</h2>
+        </div>
 
-</script>
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
 
 </body>
-</html
+</html>
