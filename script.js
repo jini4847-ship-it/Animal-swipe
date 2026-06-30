@@ -1,35 +1,14 @@
-let index = 0;
-const totalSlides = 4;
+const swiper = new Swiper(".swiper", {
+  loop: false,
 
-let startX = 0;
-let isMoving = false;
+  speed: 300,
 
-const slider = document.getElementById("slider");
+  slidesPerView: 1,
 
-document.addEventListener("touchstart", (e) => {
-    if (isMoving) return;
-    startX = e.touches[0].clientX;
-});
+  spaceBetween: 0,
 
-document.addEventListener("touchend", (e) => {
-    if (isMoving) return;
-
-    const endX = e.changedTouches[0].clientX;
-    const distance = startX - endX;
-
-    if (Math.abs(distance) < 80) return;
-
-    if (distance > 0 && index < totalSlides - 1) {
-        index++;
-    } else if (distance < 0 && index > 0) {
-        index--;
-    }
-
-    isMoving = true;
-
-    slider.style.transform = `translateX(-${index * 100}vw)`;
-
-    setTimeout(() => {
-        isMoving = false;
-    }, 350);
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
