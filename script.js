@@ -5,7 +5,7 @@ animals.forEach((animal) => {
   card.className = "card";
 
   card.innerHTML = `
-    <img src="${animal.image}" alt="${animal.name}">
+    <img src="${animal.images[0]}" alt="${animal.name}">
     <div class="info">
       <div class="emoji">${animal.emoji}</div>
       <div class="name">${animal.name}</div>
