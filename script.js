@@ -1,24 +1,20 @@
-const swiper = new Swiper(".swiper", {
-  loop: false,
-  speed: 300,
-  slidesPerView: 1,
+const animalList = document.getElementById("animalList");
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+animals.forEach((animal) => {
+  const card = document.createElement("div");
+  card.className = "card";
 
-// 사진 클릭하면 동물 이름 읽기
-document.querySelectorAll(".swiper-slide").forEach((slide) => {
-  slide.addEventListener("click", () => {
-    const text = slide.querySelector("h2").textContent.replace(/^[^\w가-힣]+\s*/, "");
+  card.innerHTML = `
+    <img src="${animal.image}" alt="${animal.name}">
+    <div class="info">
+      <div class="emoji">${animal.emoji}</div>
+      <div class="name">${animal.name}</div>
+    </div>
+  `;
 
-    const speech = new SpeechSynthesisUtterance(text);
-    speech.lang = "ko-KR";
-    speech.rate = 0.9;
-
-    speechSynthesis.cancel();
-    speechSynthesis.speak(speech);
+  card.addEventListener("click", () => {
+    alert(`${animal.name} 갤러리는 다음 단계에서 만들어요! 🐾`);
   });
+
+  animalList.appendChild(card);
 });
