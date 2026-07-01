@@ -13,8 +13,8 @@ animals.forEach((animal) => {
   `;
 
   card.addEventListener("click", () => {
-    alert(`${animal.name} 갤러리는 다음 단계에서 만들어요! 🐾`);
-  });
+    location.href = `gallery.html?id=${animal.id}`;
+});
 
   animalList.appendChild(card);
 });
