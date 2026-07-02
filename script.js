@@ -5,16 +5,17 @@ animals.forEach((animal) => {
   card.className = "card";
 
   card.innerHTML = `
-    <img src="${animal.images[0]}" alt="${animal.name}">
+    <div class="emoji" style="font-size:70px;text-align:center;margin-top:20px;">
+      ${animal.emoji}
+    </div>
     <div class="info">
-      <div class="emoji">${animal.emoji}</div>
       <div class="name">${animal.name}</div>
     </div>
   `;
 
-  card.addEventListener("click", () => {
+  card.onclick = () => {
     location.href = `gallery.html?id=${animal.id}`;
-});
+  };
 
   animalList.appendChild(card);
 });
