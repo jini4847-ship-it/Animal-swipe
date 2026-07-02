@@ -1,4 +1,4 @@
-const params = new URLSearchParams(location.search);
+const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
 const animal = animals.find(a => a.id === id);
@@ -6,30 +6,42 @@ const animal = animals.find(a => a.id === id);
 document.getElementById("title").textContent =
 `${animal.emoji} ${animal.name}`;
 
-const gallery = document.getElementById("gallery");
-
-animal.images.forEach((image)=>{
-
-    gallery.innerHTML += `
-        <div class="swiper-slide">
-            <img src="${image}">
-        </div>
-    `;
-
-});
-
-new Swiper(".swiper",{
-
-    slidesPerView:1,
-
-    pagination:{
-        el:".swiper-pagination"
-    }
-
-});
-
-document.getElementById("backBtn").onclick=()=>{
-
+document.getElementById("backBtn").onclick = () => {
     history.back();
+};
+
+async function loadImages() {
+
+    const url =
+`https://api.pexels.com/v1/search?query=${animal.search}&per_page=20`;
+
+    const response = await fetch(url,{
+        headers:{
+            Authorization:PEXELS_API_KEY
+        }
+    });
+
+    const data = await response.json();
+
+    const gallery = document.getElementById("gallery");
+
+    data.photos.forEach(photo=>{
+
+        gallery.innerHTML += `
+            <div class="swiper-slide">
+                <img src="${photo.src.large}">
+            </div>
+        `;
+
+    });
+
+    new Swiper(".swiper",{
+        slidesPerView:1,
+        pagination:{
+            el:".swiper-pagination"
+        }
+    });
 
 }
+
+loadImages();
