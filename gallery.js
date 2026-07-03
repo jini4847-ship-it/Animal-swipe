@@ -12,8 +12,10 @@ document.getElementById("backBtn").onclick = () => {
 
 async function loadImages() {
 
-    const url =
-`https://api.pexels.com/v1/search?query=${animal.search}&per_page=20`;
+    const randomPage = Math.floor(Math.random() * 30) + 1;
+
+const url =
+`https://api.pexels.com/v1/search?query=${encodeURIComponent(animal.search)}&per_page=20&page=${randomPage}`;
 
     const response = await fetch(url,{
         headers:{
