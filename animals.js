@@ -58,7 +58,7 @@ const animals = [
     name: "얼룩말",
     emoji: "🦓",
     search: "zebra"
-  }
+  },
   {
     id: "otter",
     name: "수달",
