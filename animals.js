@@ -3,19 +3,19 @@ const animals = [
     id: "lion",
     name: "사자",
     emoji: "🦁",
-    search: "lion"
+    search: "cute lion"
   },
   {
     id: "tiger",
     name: "호랑이",
     emoji: "🐯",
-    search: "tiger"
+    search: "cute tiger"
   },
   {
     id: "elephant",
     name: "코끼리",
     emoji: "🐘",
-    search: "elephant"
+    search: "cute elephant"
   },
   {
     id: "giraffe",
@@ -27,31 +27,31 @@ const animals = [
     id: "panda",
     name: "판다",
     emoji: "🐼",
-    search: "panda"
+    search: "cute panda"
   },
   {
     id: "dog",
     name: "강아지",
     emoji: "🐶",
-    search: "dog"
+    search: "cute dog"
   },
   {
     id: "cat",
     name: "고양이",
     emoji: "🐱",
-    search: "cat"
+    search: "cute cat"
   },
   {
     id: "rabbit",
     name: "토끼",
     emoji: "🐰",
-    search: "rabbit"
+    search: "cute rabbit"
   },
   {
     id: "bear",
     name: "곰",
     emoji: "🐻",
-    search: "bear"
+    search: "cute bear"
   },
   {
     id: "zebra",
