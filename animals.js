@@ -59,4 +59,16 @@ const animals = [
     emoji: "🦓",
     search: "zebra"
   }
+  {
+    id: "otter",
+    name: "수달",
+    emoji: "🦦",
+    search: "cute otter"
+  },
+  {
+    id: "squirrel",
+    name: "다람쥐",
+    emoji: "🐿️",
+    search: "cute squirrel"
+  }
 ];
