@@ -17,8 +17,8 @@ h1{
 
 #animalList{
     display:grid;
-    grid-template-columns:1fr;
-    gap:20px;
+    grid-template-columns:repeat(3, 1fr);
+    gap:12px;
 }
 
 .card{
@@ -27,6 +27,7 @@ h1{
     overflow:hidden;
     box-shadow:0 4px 12px rgba(0,0,0,.15);
     cursor:pointer;
+    padding:12px;
 }
 
 .card img{
@@ -41,11 +42,11 @@ h1{
 }
 
 .emoji{
-    font-size:36px;
+    font-size:60px;
 }
 
 .name{
-    font-size:24px;
+    font-size:20px;
     font-weight:bold;
     margin-top:8px;
 }
