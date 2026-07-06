@@ -10,40 +10,35 @@ document.getElementById("backBtn").onclick = () => {
     history.back();
 };
 
-async function loadImages() {
-
-    const randomPage = Math.floor(Math.random() * 30) + 1;
-
-const url =
-`https://api.pexels.com/v1/search?query=${encodeURIComponent(animal.search)}&per_page=20&page=${randomPage}`;
-
-    const response = await fetch(url,{
-        headers:{
-            Authorization:PEXELS_API_KEY
-        }
-    });
-
-    const data = await response.json();
+async function loadImages(retry = 0){
 
     const gallery = document.getElementById("gallery");
 
-    data.photos.forEach(photo=>{
+    gallery.innerHTML =
+    `<div style="font-size:28px;padding:40px;text-align:center;">
+    📸 사진 불러오는 중...
+    </div>`;
 
-        gallery.innerHTML += `
-            <div class="swiper-slide">
-                <img src="${photo.src.large}">
-            </div>
-        `;
+    const search =
+    animal.searches[Math.floor(Math.random()*animal.searches.length)];
 
-    });
+    const randomPage =
+    Math.floor(Math.random()*30)+1;
 
-    new Swiper(".swiper",{
-        slidesPerView:1,
-        pagination:{
-            el:".swiper-pagination"
-        }
-    });
+    const url =
+    `https://api.pexels.com/v1/search?query=${encodeURIComponent(search)}&per_page=10&page=${randomPage}`;
 
-}
+    try{
 
-loadImages();
+        const response = await fetch(url,{
+            headers:{
+                Authorization:PEXELS_API_KEY
+            }
+        });
+
+        const data = await response.json();
+
+        if(!data.photos || data.photos.length===0){
+
+            if(retry<3){
+               
