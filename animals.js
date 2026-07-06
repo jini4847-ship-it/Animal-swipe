@@ -3,72 +3,81 @@ const animals = [
     id: "lion",
     name: "사자",
     emoji: "🦁",
-    search: "cute lion"
+    searches: [
+      "baby lion",
+      "cute lion",
+      "lion portrait",
+      "lion illustration"
+    ]
   },
   {
     id: "tiger",
     name: "호랑이",
     emoji: "🐯",
-    search: "cute tiger"
+    searches: [
+      "baby tiger",
+      "cute tiger",
+      "tiger portrait",
+      "tiger illustration"
+    ]
   },
   {
     id: "elephant",
     name: "코끼리",
     emoji: "🐘",
-    search: "cute elephant"
+    searches: [
+      "baby elephant",
+      "cute elephant",
+      "elephant portrait",
+      "elephant illustration"
+    ]
   },
   {
     id: "giraffe",
     name: "기린",
     emoji: "🦒",
-    search: "giraffe"
+    searches: [
+      "baby giraffe",
+      "cute giraffe",
+      "giraffe portrait",
+      "giraffe illustration"
+    ]
   },
   {
     id: "panda",
     name: "판다",
     emoji: "🐼",
-    search: "cute panda"
+    searches: [
+      "cute panda",
+      "baby panda",
+      "panda portrait",
+      "panda illustration"
+    ]
   },
   {
     id: "dog",
     name: "강아지",
     emoji: "🐶",
-    search: "cute dog"
+    searches: [
+      "cute puppy",
+      "golden retriever puppy",
+      "puppy portrait",
+      "puppy illustration"
+    ]
   },
   {
     id: "cat",
     name: "고양이",
     emoji: "🐱",
-    search: "cute cat"
+    searches: [
+      "cute kitten",
+      "kitten portrait",
+      "baby cat",
+      "cat illustration"
+    ]
   },
   {
     id: "rabbit",
     name: "토끼",
     emoji: "🐰",
-    search: "cute rabbit"
-  },
-  {
-    id: "bear",
-    name: "곰",
-    emoji: "🐻",
-    search: "cute bear"
-  },
-  {
-    id: "zebra",
-    name: "얼룩말",
-    emoji: "🦓",
-    search: "zebra"
-  },
-  {
-    id: "otter",
-    name: "수달",
-    emoji: "🦦",
-    search: "cute otter"
-  },
-  {
-    id: "squirrel",
-    name: "다람쥐",
-    emoji: "🐿️",
-    search: "cute squirrel"
-  }
-];
+   
