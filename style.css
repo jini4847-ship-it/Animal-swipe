@@ -5,86 +5,83 @@
 }
 
 body{
+
     font-family:Arial,sans-serif;
-    background:#eaf8ff;
-    padding:20px;
+
+    background:#dff6ff;
+
+    padding:15px;
+
 }
 
 h1{
+
     text-align:center;
-    margin-bottom:20px;
+
+    margin-bottom:15px;
+
+}
+
+#randomBtn{
+
+    width:100%;
+
+    padding:15px;
+
+    font-size:22px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#ffcc00;
+
+    margin-bottom:15px;
+
 }
 
 #animalList{
+
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+
+    grid-template-columns:repeat(3,1fr);
+
     gap:12px;
+
 }
 
 .card{
+
     background:white;
+
     border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
-    cursor:pointer;
-    padding:12px;
-}
 
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
+    padding:18px;
 
-.info{
-    padding:15px;
     text-align:center;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+
+}
+
+.card:active{
+
+    transform:scale(.96);
+
 }
 
 .emoji{
+
     font-size:60px;
+
 }
 
 .name{
+
+    margin-top:10px;
+
     font-size:20px;
+
     font-weight:bold;
-    margin-top:8px;
-}
-#backBtn{
 
-margin:15px;
-
-padding:10px 18px;
-
-font-size:18px;
-
-border:none;
-
-border-radius:12px;
-
-background:#4CAF50;
-
-color:white;
-
-}
-
-.swiper{
-
-height:80vh;
-
-}
-
-.swiper-slide{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width:100vw;
-    height:100vh;
-    background:#000;
-}
-
-.swiper-slide img{
-    max-width:100%;
-    max-height:100%;
-    object-fit:contain;
 }
