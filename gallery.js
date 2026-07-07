@@ -30,11 +30,10 @@ async function loadImages(retry = 0){
 const search =
 keywords[Math.floor(Math.random() * keywords.length)];
 
-    const randomPage =
-    Math.floor(Math.random()*30)+1;
+    const randomPage = Math.floor(Math.random() * 50) + 1;
 
-    const url =
-    `https://api.pexels.com/v1/search?query=${encodeURIComponent(search)}&per_page=10&page=${randomPage}`;
+const url =
+`https://api.pexels.com/v1/search?query=${encodeURIComponent(search)}&per_page=15&page=${randomPage}`;
 
     try{
 
