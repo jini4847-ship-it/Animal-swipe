@@ -19,8 +19,16 @@ async function loadImages(retry = 0){
     📸 사진 불러오는 중...
     </div>`;
 
-    const search =
-    animal.searches[Math.floor(Math.random()*animal.searches.length)];
+    const keywords = [
+    ...animal.searches,
+    `${animal.name} cartoon`,
+    `${animal.name} illustration`,
+    `${animal.name} cute`,
+    `${animal.name} baby`
+];
+
+const search =
+keywords[Math.floor(Math.random() * keywords.length)];
 
     const randomPage =
     Math.floor(Math.random()*30)+1;
