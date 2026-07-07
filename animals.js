@@ -1,4 +1,4 @@
-const animals = [
+8const animals = [
   {
     id: "lion",
     name: "사자",
@@ -80,4 +80,6 @@ const animals = [
     id: "rabbit",
     name: "토끼",
     emoji: "🐰",
-   
+    ]
+}
+];
