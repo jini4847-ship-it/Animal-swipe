@@ -1,4 +1,4 @@
-8const animals = [
+const animals = [
   {
     id: "lion",
     name: "사자",
@@ -77,9 +77,14 @@
     ]
   },
   {
-    id: "rabbit",
-    name: "토끼",
-    emoji: "🐰",
-    ]
+  id: "rabbit",
+  name: "토끼",
+  emoji: "🐰",
+  searches: [
+    "cute rabbit",
+    "baby rabbit",
+    "rabbit portrait",
+    "rabbit illustration"
+  ]
 }
 ];
