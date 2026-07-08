@@ -2,8 +2,6 @@ const animalList = document.getElementById("animalList");
 
 console.log("animals =", animals);
 
-alert("script 실행");
-
 animals.forEach((animal) => {
   const card = document.createElement("div");
   card.className = "card";
