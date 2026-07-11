@@ -11,6 +11,22 @@ if (!animal) {
 document.getElementById("title").textContent =
 `${animal.emoji} ${animal.name}`;
 
+document.getElementById("speakBtn").onclick = () => {
+
+    speechSynthesis.cancel();
+
+    const speech = new SpeechSynthesisUtterance(animal.name);
+
+    speech.lang = "ko-KR";
+
+    speech.rate = 0.8;
+
+    speech.pitch = 1.1;
+
+    speechSynthesis.speak(speech);
+
+};
+
 document.getElementById("backBtn").onclick = () => {
     history.back();
 };
