@@ -139,3 +139,15 @@ h1{
     object-fit:contain;
     border-radius:20px;
 }
+
+#speakBtn{
+    display:block;
+    width:90%;
+    margin:10px auto 20px;
+    padding:14px;
+    font-size:22px;
+    border:none;
+    border-radius:16px;
+    background:#4CAF50;
+    color:white;
+}
