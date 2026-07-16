@@ -76,7 +76,7 @@ const animals = [
       "cat illustration"
     ]
   },
-  {
+{
   id: "rabbit",
   name: "토끼",
   emoji: "🐰",
@@ -85,6 +85,28 @@ const animals = [
     "baby rabbit",
     "rabbit portrait",
     "rabbit illustration"
-  ]
-}
+    ]
+  },
+{
+    id: "bear",
+    name: "곰",
+    emoji: "🐻",
+    searches: [
+        "cute bear",
+        "baby bear",
+        "brown bear",
+        "bear illustration"
+    ]
+  },
+{
+    id: "otter",
+    name: "수달",
+    emoji: "🦦",
+    searches: [
+        "cute otter",
+        "baby otter",
+        "otter swimming",
+        "otter illustration"
+    ]
+  }
 ];
