@@ -108,5 +108,5 @@ const animals = [
         "otter swimming",
         "otter illustration"
     ]
-  }
+}
 ];
