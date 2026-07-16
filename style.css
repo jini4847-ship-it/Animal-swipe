@@ -155,17 +155,19 @@ h1{
 .swiper{
     z-index:1;
 }
-/* 모든 버튼 */
 button{
-    transition: transform 0.1s ease,
-                box-shadow 0.1s ease,
-                opacity 0.1s ease;
-    cursor:pointer;
+    transition: all .12s ease;
 }
 
-/* 버튼을 누르는 순간 */
 button:active{
-    transform: scale(0.95);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-    opacity:0.9;
+    transform: translateY(3px) scale(0.96);
+    box-shadow:0 2px 6px rgba(0,0,0,.2);
+}
+
+.card{
+    transition: all .12s ease;
+}
+
+.card:active{
+    transform: translateY(4px) scale(.96);
 }
