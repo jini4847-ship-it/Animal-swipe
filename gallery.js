@@ -17,12 +17,10 @@ document.getElementById("speakBtn").onclick = () => {
 
     const speech = new SpeechSynthesisUtterance(animal.name);
 
-    speech.lang = "ko-KR";
-
-    speech.rate = 0.8;
-
-    speech.pitch = 1.1;
-
+speech.lang = "ko-KR";
+speech.rate = 0.95;     // 조금 더 자연스럽게
+speech.pitch = 0.85;    // 높은 여자 목소리보다 낮은 톤
+speech.volume = 1;
     speechSynthesis.speak(speech);
 
 };
